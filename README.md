@@ -1,4 +1,4 @@
-# darkmatter.application
+# darkmatter_app
 An Action-Domain-Responder project skeleton
 
 darkmatter is currently a PSR-7-ish compliant [Action-Domain-Responder](http://pmjones.io/adr)
