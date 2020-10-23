@@ -1,7 +1,7 @@
-# darkmatter.app
+# darkmatter.application
 An Action-Domain-Responder project skeleton
 
-darkmatter.app is currently a PSR-7-ish compliant [Action-Domain-Responder](http://pmjones.io/adr)
+darkmatter is currently a PSR-7-ish compliant [Action-Domain-Responder](http://pmjones.io/adr)
 (ADR) system.
 
 ## Installing darkmatter
