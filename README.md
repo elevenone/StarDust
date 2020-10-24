@@ -16,9 +16,9 @@ Confirm the installation by changing into the project directory and starting the
 built-in PHP web server:
 
     cd example-project
-    php -S localhost:8080 -t public/
+    php ./bin/admin.php
 
-You can then browse to <http://localhost:8080/>:
+You can then browse to <http://127.0.0.1:8080/>:
 
     {"phrase":"Hello world"}
 
