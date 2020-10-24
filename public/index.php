@@ -20,4 +20,4 @@ if (php_sapi_name() == "cli-server") {
 require dirname(__DIR__) . '/vendor/autoload.php';
 
 // commencing countdown
-require dirname(__DIR__) . '/app/launch.php';
+require dirname(__DIR__) . '/app/boot.php';
