@@ -1,15 +1,7 @@
-<<<<<<< HEAD
 # stardust
-An Action-Domain-Responder project skeleton for darkmatter
-
-stardust is an [Action-Domain-Responder](http://pmjones.io/adr) application
-=======
-# darkmatter_app
 An Action-Domain-Responder project skeleton
 
-darkmatter is currently a PSR-7-ish compliant [Action-Domain-Responder](http://pmjones.io/adr)
->>>>>>> 5f0f304e800bda0c4920520ba67b2be78e9ec6f6
-(ADR) system.
+stardust is a PSR-7-ish [Action-Domain-Responder](http://pmjones.io/adr) (ADR) system.
 
 ## Installing stardust
 
