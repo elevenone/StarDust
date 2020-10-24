@@ -8,7 +8,7 @@ use DarkMatter\Components\Logger\Factory as LoggerFactory;
 use DarkMatter\Http\Request;
 use DarkMatter\Components\Router;
 use DarkMatter\Exception\ExceptionHandler;
-use DarkMatter\Exception\Application\EndocoreException;
+use DarkMatter\Exception\Application\DarkMatterException;
 use DarkMatter\Application as Application;
 
 
@@ -34,7 +34,7 @@ try {
     );
 
     // return $app;
-    } catch (EndocoreException $e) {
+    } catch (DarkMatterException $e) {
         exit(sprintf('Error: %s (%s:%d)', $e->getMessage(), $e->getFile(), $e->getLine()));
     } catch (\Exception $e) {
         exit(sprintf('Error: %s (%s:%d)', $e->getMessage(), $e->getFile(), $e->getLine()));

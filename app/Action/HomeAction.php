@@ -13,7 +13,7 @@ use App\Domain\HomeDomain;
  *
  * This is an example of a HtmlAction. In every HtmlAction you have access to the HtmlResponder.
  *
- * @package Bloatless\EndocoreApp\Actions
+ * @package App\Actions
  */
 class HomeAction extends HtmlAction
 {
