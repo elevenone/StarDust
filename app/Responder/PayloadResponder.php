@@ -6,13 +6,14 @@ namespace App\Responder;
 
 use DarkMatter\Http\Response;
 use DarkMatter\Responder\JsonResponder;
+use DarkMatter\Responder\HtmlResponder;
 use DarkMatter\Payload\Payload;
 use DarkMatter\Payload\Status;
 
 class PayloadResponder extends JsonResponder
 {
     /**
-     * Generates response to a stopclock-action request.
+     * Generates a payload response.
      *
      * @param Payload $payload
      * @return Response
