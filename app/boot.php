@@ -11,7 +11,6 @@ use DarkMatter\Exception\ExceptionHandler;
 use DarkMatter\Exception\Application\DarkMatterException;
 use DarkMatter\Application as Application;
 
-
 try {
     // include config files:
     $config = require_once __DIR__ . '/config/config.php';
