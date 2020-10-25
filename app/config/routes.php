@@ -17,6 +17,12 @@ return [
         'handler' => 'App\Action\HomeActionPayload'
     ],
 
+    'payloadtesttwo' => [
+        'method' => 'GET',
+        'pattern' => '/payloadtwo/[{id:\d+}]',             // [] = optional
+        'handler' => 'App\Action\HomeActionPayloadTwo'
+    ],
+
     // Another GET route (Path: /json-demo)
     'json' => [
         'method' => 'GET',
