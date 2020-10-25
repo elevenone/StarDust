@@ -30,6 +30,10 @@ class HomeDomain
             <br/>
             <a href="payload/42">payload/42</a>
             <br/>
+            <a href="payloadtwo/">payloadtwo/</a>
+            <br/>
+            <a href="payloadtwo/42">payloadtwo/42</a>
+            <br/>
         ';
         return $welcomeText;
     }
