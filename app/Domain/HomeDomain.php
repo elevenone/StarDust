@@ -20,6 +20,7 @@ class HomeDomain
      */
     public function getWelcomeText(): string
     {
-        return '<p>Hello World!<br>This is Stardust...</p>';
+        $welcomeText = '<p>Hello World!<br>This is Stardust...</p>';
+        return $welcomeText;
     }
 }
