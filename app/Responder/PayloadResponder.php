@@ -5,10 +5,15 @@ declare(strict_types=1);
 namespace App\Responder;
 
 use DarkMatter\Http\Response;
-use DarkMatter\Responder\JsonResponder;
-use DarkMatter\Responder\HtmlResponder;
 use DarkMatter\Payload\Payload;
 use DarkMatter\Payload\Status;
+
+use DarkMatter\Responder\HtmlResponder;
+
+
+/**
+ * @property string $view
+ */
 
 class PayloadResponder extends HtmlResponder
 {
@@ -21,10 +26,19 @@ class PayloadResponder extends HtmlResponder
     public function __invoke(Payload $payload): Response
     {
         $payloadResult = $payload->getResult();
+
         if ($payload->getStatus() === Status::FOUND) {
             return $this->found($payloadResult);
         }
 
         return $this->error([$payloadResult['error'] ?? 'Unknown Error']);
     }
+
+
+
+
+
+
+
+
 }
