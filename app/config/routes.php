@@ -8,25 +8,25 @@ return [
     'home' => [
         'method' => 'GET',
         'pattern' => '/',
-        'handler' => 'App\Action\HomeAction'
+        'handler' => 'App\Http\Action\HomeAction'
     ],
 
     'payloadtest' => [
         'method' => 'GET',
         'pattern' => '/payload/[{id:\d+}]',             // [] = optional
-        'handler' => 'App\Action\HomeActionPayload'
+        'handler' => 'App\Http\Action\HomeActionPayload'
     ],
 
     'payloadtesttwo' => [
         'method' => 'GET',
         'pattern' => '/payloadtwo/[{id:\d+}]',             // [] = optional
-        'handler' => 'App\Action\HomeActionPayloadTwo'
+        'handler' => 'App\Http\Action\HomeActionPayloadTwo'
     ],
 
     // Another GET route (Path: /json-demo)
     'json' => [
         'method' => 'GET',
         'pattern' => '/json-demo',
-        'handler' => 'App\Action\JsonDemoAction'
+        'handler' => 'App\Http\Action\JsonDemoAction'
     ]
 ];

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Action;
+namespace App\Http\Action;
 
 // framework
 use DarkMatter\Action\HtmlAction;
@@ -10,7 +10,7 @@ use DarkMatter\Http\Response;
 
 // application
 use App\Domain\HomeDomainPayload;
-use App\Responder\PayloadResponder;
+use App\Http\PayloadResponder;
 
 /**
  * Class HomeActionPayload

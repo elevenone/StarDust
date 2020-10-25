@@ -2,15 +2,17 @@
 
 declare(strict_types=1);
 
-namespace App\Action;
+namespace App\Http\Action;
 
 // framework
 use DarkMatter\Http\Response;
-use DarkMatter\Action\HtmlAction;
+
+// StarDust
+use StarDust\Action\HtmlAction;
 
 // application
 use App\Domain\HomeDomainPayloadTwo;
-use App\Responder\PayloadResponder;
+use App\Http\PayloadResponder;
 
 /**
  * Class HomeActionPayload

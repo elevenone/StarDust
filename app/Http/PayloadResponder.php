@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Responder;
+namespace App\Http;
 
 use DarkMatter\Http\Response;
 use DarkMatter\Payload\Payload;

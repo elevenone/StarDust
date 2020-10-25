@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Action;
+namespace App\Http\Action;
 
 use DarkMatter\Action\JsonAction;
 use DarkMatter\Http\Response;
