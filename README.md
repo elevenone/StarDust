@@ -1,9 +1,10 @@
 # stardust
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/elevenone/stardust/badges/quality-score.png?b=main)](https://scrutinizer-ci.com/g/elevenone/stardust/?branch=main)
-[![Build Status](https://scrutinizer-ci.com/g/elevenone/stardust/badges/build.png?b=main)](https://scrutinizer-ci.com/g/elevenone/stardust/build-status/main)
 An Action-Domain-Responder project skeleton
 
-stardust is a PSR-7-ish [Action-Domain-Responder](http://pmjones.io/adr) (ADR) system.
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/elevenone/stardust/badges/quality-score.png?b=main)](https://scrutinizer-ci.com/g/elevenone/stardust/?branch=main)
+[![Build Status](https://scrutinizer-ci.com/g/elevenone/stardust/badges/build.png?b=main)](https://scrutinizer-ci.com/g/elevenone/stardust/build-status/main)
+
+stardust is an [Action-Domain-Responder](http://pmjones.io/adr) (ADR) system.
 
 ## Installing stardust
 
