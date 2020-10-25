@@ -10,7 +10,7 @@ use DarkMatter\Responder\HtmlResponder;
 use DarkMatter\Payload\Payload;
 use DarkMatter\Payload\Status;
 
-class PayloadResponder extends JsonResponder
+class PayloadResponder extends HtmlResponder
 {
     /**
      * Generates a payload response.

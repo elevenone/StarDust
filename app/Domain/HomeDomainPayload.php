@@ -35,11 +35,14 @@ class HomeDomainPayload extends Domain
         // get the data from the db or filesystem
         $payload_dymmy_data = [
             'body'  => 'welcome to darkmatter',
-            'note'  => 'message from: ' . __CLASS__,
-            'button' => '<a href="http://localhost:8000">index</a>',
-            'button2' => '<a href="/payloadtest/">payloadtest</a>',
-            'button3' => '<a href="/payloadtest/43545">payloadtest/43545</a>',
-            'id' => $this->id
+            'extras' => [
+                'message'  => 'welcome to darkmatter',
+                'note'  => 'message from: ' . __CLASS__,
+                'button' => '<a href="http://localhost:8000">index</a>',
+                'button2' => '<a href="/payloadtest/">payloadtest</a>',
+                'button3' => '<a href="/payloadtest/43545">payloadtest/43545</a>',
+                'id' => $this->id
+            ]
         ];
 
         // if we get the data or file or whatever, then set the payload STATUS to FOUND
