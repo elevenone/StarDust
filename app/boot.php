@@ -9,7 +9,7 @@ use DarkMatter\Http\Request;
 use DarkMatter\Components\Router;
 use DarkMatter\Exception\ExceptionHandler;
 use DarkMatter\Exception\Application\DarkMatterException;
-use DarkMatter\Application as Application;
+use App\Application as Application;
 
 try {
     // include config files:
