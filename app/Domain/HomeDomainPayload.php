@@ -34,9 +34,9 @@ class HomeDomainPayload extends Domain
     {
         // get the data from the db or filesystem
         $payload_dymmy_data = [
-            'body'  => 'welcome to darkmatter',
+            'body'  => 'welcome to stardust / darkmatter',
             'extras' => [
-                'message'  => 'welcome to darkmatter',
+                'message'  => 'welcome to stardust / darkmatter',
                 'note'  => 'message from: ' . __CLASS__,
                 'button' => '<a href="http://localhost:8000">index</a>',
                 'button2' => '<a href="/payloadtest/">payloadtest</a>',
