@@ -2,7 +2,7 @@
 /**
  * stardust / a project skeleton for darkmatter
  */
-declare(strict_types=1);
+declare(strict_types = 1);
 
 // date_default_timezone_set('UTC');
 

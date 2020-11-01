@@ -2,7 +2,7 @@
 /**
  * launch script
  */
-declare(strict_types=1);
+declare(strict_types = 1);
 
 use DarkMatter\Components\Logger\Factory as LoggerFactory;
 use DarkMatter\Http\Request;
@@ -32,7 +32,9 @@ try {
         $exceptionHandler
     );
 
+    // $app->run();
     // return $app;
+/*
     } catch (DarkMatterException $e) {
         exit(sprintf('Error: %s (%s:%d)', $e->getMessage(), $e->getFile(), $e->getLine()));
     } catch (\Exception $e) {
@@ -40,5 +42,11 @@ try {
     } catch (\Error $e) {
         exit(sprintf('Error: %s (%s:%d)', $e->getMessage(), $e->getFile(), $e->getLine()));
     }
+*/
 
-$app->run();
+    } catch (\Exception $e) {
+        exit('Error: ' . $e->getMessage());
+    }
+
+
+ $app->run();

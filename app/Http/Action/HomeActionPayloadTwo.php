@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types=1);
+declare(strict_types = 1);
 
 namespace App\Http\Action;
 
@@ -28,7 +28,7 @@ class HomeActionPayloadTwo extends HtmlAction
     public function __invoke(array $arguments = []) : Response
     {
         // default argument / when not specified from the route
-        $id = 42324234234;
+        $id = $arguments['id'] ?? 424;
 
         // if (!empty($arguments['id'])) {}
         if (!isset($arguments['id'])) {

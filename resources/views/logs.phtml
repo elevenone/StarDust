@@ -1,0 +1,109 @@
+<!-- extends "layouts/default" -->
+<div class="columns">
+    <div class="column col-2">
+        <form action="/" method="get">
+
+            <ul class="menu">
+                <li class="divider" data-content="Source"></li>
+                <li class="menu-item">
+                    <?php foreach ($sources as $source): ?>
+                        <label class="form-checkbox">
+                            <?php if (in_array($source, $filters['source'])): ?>
+                                <input type="checkbox" name="s[]" value="<?php $this->out($source); ?>" checked />
+                            <?php else: ?>
+                                <input type="checkbox" name="s[]" value="<?php $this->out($source); ?>" />
+                            <?php endif; ?>
+                            <i class="form-icon"></i> <?php $this->out($source); ?>
+                        </label>
+                    <?php endforeach; ?>
+                </li>
+
+                <li class="divider" data-content="Level"></li>
+                <li class="menu-item">
+                    <?php foreach ($levels as $levelCode => $levelName): ?>
+                        <label class="form-checkbox">
+                            <?php if (in_array($levelCode, $filters['level'])): ?>
+                                <input type="checkbox" name="l[]" value="<?php $this->out($levelCode); ?>" checked />
+                            <?php else: ?>
+                                <input type="checkbox" name="l[]" value="<?php $this->out($levelCode); ?>" />
+                            <?php endif; ?>
+                            <i class="form-icon"></i> <?php $this->out($levelName); ?>
+                        </label>
+                    <?php endforeach; ?>
+                </li>
+
+                <li class="menu-item">
+                    <div class="form-group form-inline">
+                        <button type="submit" class="btn btn-primary">Filter</button>
+                        <a href="/" class="btn btn-primary">Clear</a>
+                    </div>
+                </li>
+            </ul>
+        </form>
+    </div>
+    <div class="column col-10">
+        <div class="columns mt-2">
+            <div class="column col-2"><strong>Source</strong></div>
+            <div class="column col-1"><strong>Type</strong></div>
+            <div class="column col-2"><strong>Time</strong></div>
+            <div class="column col-7"><strong>Message</strong></div>
+        </div>
+        <div class="divider"></div>
+
+        <?php foreach ($logs as $i => $log): ?>
+            <div class="columns">
+                <div class="column col-2"><?php $this->out($log->source); ?></div>
+                <div class="column col-1">
+                    <small>
+                    <?php if($log->level >= 400): ?>
+                        <span class="label label-rounded label-error"><?php $this->out($log->level_name); ?></span>
+                    <?php elseif ($log->level >= 250): ?>
+                        <span class="label label-rounded label-warning"><?php $this->out($log->level_name); ?></span>
+                    <?php else: ?>
+                        <span class="label label-rounded label-default"><?php $this->out($log->level_name); ?></span>
+                    <?php endif; ?>
+                    </small>
+                </div>
+                <div class="column col-2"><?php $this->out($log->created_at); ?></div>
+                <div class="column col-7"><?php echo mb_strimwidth($log->message, 0, 80, '&hellip;'); ?></div>
+            </div>
+
+            <details>
+                <summary class="text-primary c-hand">Details</summary>
+                <strong>Message:</strong>
+                <pre class="code"><code><?php $this->out($log->message, false); ?></code></pre>
+                <?php if (!empty($log->context)): ?>
+                    <strong>Context:</strong>
+                    <pre class="code"><code><?php print_r($log->context); ?></code></pre>
+                <?php endif; ?>
+                <?php if (!empty($log->extra)): ?>
+                    <strong>Extra:</strong>
+                    <pre class="code"><code><?php print_r($log->extra); ?></code></pre>
+                <?php endif; ?>
+            </details>
+            <div class="divider"></div>
+        <?php endforeach; ?>
+
+        <?php if ($pagination['pages'] > 1): ?>
+            <ul class="pagination">
+                <li class="page-item <?php echo ($pagination['current'] === 1) ? 'disabled' : ''; ?>">
+                    <a href="<?php $this->out($pagination['first']); ?>">First</a>
+                </li>
+                <?php if (isset($pagination['prev'])): ?>
+                    <li class="page-item <?php echo (empty($pagination['prev'])) ? 'disabled' : ''; ?>">
+                        <a href="<?php $this->out($pagination['prev']); ?>">Prev</a>
+                    </li>
+                <?php endif; ?>
+                <?php if (isset($pagination['next'])): ?>
+                    <li class="page-item <?php echo (empty($pagination['next'])) ? 'disabled' : ''; ?>">
+                        <a href="<?php $this->out($pagination['next']); ?>">Next</a>
+                    </li>
+                <?php endif; ?>
+
+                <li class="page-item <?php echo ($pagination['current'] === $pagination['pages']) ? 'disabled' : ''; ?>">
+                    <a href="<?php $this->out($pagination['last']); ?>">Last</a>
+                </li>
+            </ul>
+        <?php endif; ?>
+    </div>
+</div>

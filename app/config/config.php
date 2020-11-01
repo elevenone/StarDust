@@ -9,4 +9,5 @@ return [
         'path_logs' => __DIR__ . '/../../_tmp/logs',
         'min_level' => 'warning',
     ],
+    'path_views' => __DIR__ . '/../../resources/views',
 ];
