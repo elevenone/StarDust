@@ -22,5 +22,8 @@
     "require-dev": {
         "phpunit/phpunit": "^8.0",
         "pds/skeleton": "^1.0"
+    },
+    "scripts": {
+        "serve": "@php ./bin/serve.php"
     }
 }
